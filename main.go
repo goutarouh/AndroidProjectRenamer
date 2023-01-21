@@ -1,7 +1,6 @@
 package main
 
-import "fmt"
-
 func main() {
-	fmt.Println("go go!")
+	// newName := "SimpleRssReader"
+	// newPackage := "com.github.goutarouh.simplerssreader"
 }
