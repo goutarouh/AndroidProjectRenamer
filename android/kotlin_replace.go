@@ -5,13 +5,13 @@ import (
 	"strings"
 )
 
-func ReplaceKotlin(path, oldPackageName, newPackageName string) error {
+func ReplaceKotlin(path, old, new string) error {
 	bytes, err := os.ReadFile(path)
 	if err != nil {
 		os.Exit(1)
 	}
 	contents := string(bytes)
-	contents = strings.ReplaceAll(contents, oldPackageName, newPackageName)
+	contents = strings.ReplaceAll(contents, old, new)
 
 	err = os.WriteFile(path, []byte(contents), os.ModePerm)
 	if err != nil {
