@@ -1,10 +1,19 @@
-package file
+package androidfile
 
 import (
 	"os"
 	"path/filepath"
 	"testing"
 )
+
+func TestGetRenameDirs(t *testing.T) {
+	root := "/mnt/c/Users/81704/Documents/dev/android/SimpleRssReader"
+	target := "androidsampleapp"
+	_, err := GetRenameDirs(root, target)
+	if err != nil {
+		t.Fatal("TestGetRenameDirs", err)
+	}
+}
 
 func TestRename(t *testing.T) {
 	os.Mkdir("test1", 0777)
